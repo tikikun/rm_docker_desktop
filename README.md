@@ -42,11 +42,10 @@ brew install docker
 #### Step 3: Install buildx (This is essential)
 Now you may ask why? buildx is bundled with docker desktop, if you don't install buildx colima will use a deprecated version of docker build, which will not be a good replacement for docker desktop. Hence, this step is a must.
 
-Steps to install buildx for apple silicon (TODO: add in other systems)
+Steps to install buildx for apple silicon (TODO: add in other systems). You need to install github cli client btw (brew install gh)
 ```zsh
 RELEASE_FILE_SUFFIX='darwin-arm64'
 
-rm *.$RELEASE_FILE_SUFFIX
 gh release download --repo 'github.com/docker/buildx' --pattern "*.$RELEASE_FILE_SUFFIX"
 mkdir -p ~/.docker/cli-plugins
 mv -f *.$RELEASE_FILE_SUFFIX ~/.docker/cli-plugins/docker-buildx
