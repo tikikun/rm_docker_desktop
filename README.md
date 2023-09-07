@@ -1,8 +1,9 @@
 
 # No more Docker Desktop
 
-
-![Alt text](images/no_docker.png)
+<p align="center">
+  <img src="https://github.com/tikikun/rf_docker_desktop/raw/main/images/no_docker.png" />
+</p>
 
 ## Why docker desktop is not great
 
