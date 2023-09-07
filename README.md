@@ -35,6 +35,12 @@ List of alternatives:
 ```zsh
 brew install colima
 ```
+WARNING:
+For some users, reported issues with credentials, can be solved with installation below
+```zsh
+brew install docker-credential-helper
+```
+
 #### Step 2: Install docker (If you haven't)
 ```zsh
 brew install docker
