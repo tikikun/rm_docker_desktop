@@ -1,9 +1,4 @@
 #!/bin/bash
-# Get the number of processors
-num_processors=$(sysctl -n hw.ncpu)
-
-# Get the total memory in MB
-total_memory_gb=$(sysctl -n hw.memsize | awk '{print int($0/1024/1024/1024)}')
 
 echo "Starting Combo 1 Installation..."
 
@@ -48,7 +43,7 @@ fi
 
 # Step 4: Run colima
 echo "Step 4: Running colima..."
-colima start --arch aarch64 --vm-type vz --cpu $num_processors --memory $total_memory_gb 
+colima start --arch aarch64 --vm-type vz --cpu $(sysctl -n hw.ncpu) --memory $(sysctl -n hw.memsize | awk '{print int($0/1024/1024/1024)}')
 
 # Verify docker is running
 docker info
