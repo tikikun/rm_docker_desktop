@@ -63,7 +63,7 @@ fi
 # Step 6: Set up docker host for lazydocker
 echo "Step 6: Setting up docker host for lazydocker..."
 echo export DOCKER_HOST="unix://$HOME/.colima/docker.sock" >> ~/.zshrc
-echo alias colima.quick='colima start --arch aarch64 --vm-type vz --cpu $(sysctl -n hw.ncpu) --memory $(sysctl -n hw.memsize | awk "{print int(\$0/1024/1024/1024)}")' >> ~/.zshrc
+echo "alias colima.quick='colima start --arch aarch64 --vm-type vz --cpu \$(sysctl -n hw.ncpu) --memory \$(sysctl -n hw.memsize | awk \"{print int(\$0/1024/1024/1024)}\")'" >> ~/.zshrc
 
 # Verify if user uses other shells like bash
 default_shell=$(basename "$SHELL")
